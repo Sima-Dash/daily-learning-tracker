@@ -1,24 +1,14 @@
-# README
+# Daily Learning Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is created for learning Ruby on Rails.
 
-Things you may want to cover:
+Current Progress:
+- Rails setup completed
+- GitHub repository created
+- Initial environment configured
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Tech Stack:
+- Ruby
+- Ruby on Rails
+- VS Code
+- GitHub
