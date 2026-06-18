@@ -1,7 +1,31 @@
 <h1>Daily Learning Tracker</h1>
 
-<p>Welcome to my Ruby on Rails learning project.</p>
-
 <a href="/learning_entries/new">
-     Add New Learning Entry
+     Add Entry
 </a>
+
+<hr>
+
+<% @entries.each do |entry| %>
+   <p>
+     Date:
+     <%= entry.date %>
+   </p>
+
+   <p>
+     Topic:
+     <%= entry.topic %>
+   </p>
+
+   <p>
+     Hours:
+     <%= entry.hours %>
+   </p>
+
+   <p>
+     Notes:
+     <%= entry.notes %>
+   </p>
+
+   <hr>
+   <% end %>
