@@ -12,7 +12,8 @@ class LearningEntriesController < ApplicationController
         
         if @entry.save
             redirect_to learning_entries_path
-        
+        else
+            render :new
         end
     end
 
