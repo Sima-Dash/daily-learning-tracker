@@ -1,0 +1,26 @@
+<h1>Edit Learning Entry</h1>
+
+<%= form_with model:@entry do |f| %>
+    <p>
+        <%= f.label :date %>
+        <%= f.date_field :date %>
+    </p>
+
+    <p>
+        <%= f.label :topic %>
+        <%= f.text_field :topic %>
+    </p>
+
+    <p>
+        <%= f.label :hours %>
+        <%= f.number_field :hours %>
+    </p>
+
+    <p>
+        <%= f.label :notes %>
+        <%= f.text_area :notes %>
+    </p>
+
+    <%= f.submit "Update" %>
+<% end %>
+    
