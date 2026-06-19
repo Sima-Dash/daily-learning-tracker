@@ -17,6 +17,20 @@ class LearningEntriesController < ApplicationController
         end
     end
 
+    def edit
+        @entry = LearningEntry.find(params[:id])
+    end
+
+    def update
+        @entry = LearningEntry.find(params[:id])
+
+        if @entry.update(entry_params)
+            redirect_to learning_entries_path
+        else
+            render :edit
+        end
+    end
+
     private
 
     def entry_params
