@@ -1,5 +1,20 @@
 <h1>Add Learning Entry</h1>
 
+<% if @entry.errors.any? %>
+  <div>
+    <h3>
+      <%= pluralize(@entry.errors.count, "error") %>
+      prevented this entry from saving:
+    </h3>
+
+    <ul>
+      <% @entry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_with model:@entry do |f| %>
    <p>
       <%= f.label :date %>

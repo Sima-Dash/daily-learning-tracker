@@ -1,5 +1,15 @@
 <h1>Edit Learning Entry</h1>
 
+<% if @entry.errors.any? %>
+   <h3>Please fix the errors</h3>
+
+   <ul>
+      <% @entry.errors.full_messages.each do |message| %>
+         <li><%= message %></li>
+      <% end %>
+   </ul>
+<% end %>
+
 <%= form_with model:@entry do |f| %>
     <p>
         <%= f.label :date %>
