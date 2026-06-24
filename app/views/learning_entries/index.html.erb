@@ -1,35 +1,34 @@
 <h1>Daily Learning Tracker</h1>
 
-<a href="/learning_entries/new">
-     Add Entry
-</a>
+<%= link_to "Add Entry", new_learning_entry_path %>
 
 <hr>
 
 <% @entries.each do |entry| %>
+  <div>
    <p>
-     Date:
+     <strong>Date:</strong>
      <%= entry.date %>
    </p>
 
    <p>
-     Topic:
+     <strong>Topic:</strong>
      <%= entry.topic %>
    </p>
 
    <p>
-     Hours:
+     <strong>Hours:</strong>
      <%= entry.hours %>
    </p>
 
    <p>
-     Notes:
+     <strong>Notes:</strong>
      <%= entry.notes %>
    </p>
 
-  <a href="/learning_entries/<%= entry.id %>/edit">
-      Edit
-  </a>
-  
-   <hr>
-   <% end %>
+   <%= link_to "Edit", edit_learning_entry_path(entry) %>
+   
+   </div>
+
+  <hr>
+<% end %>
