@@ -27,6 +27,11 @@
    </p>
 
    <%= link_to "Edit", edit_learning_entry_path(entry) %>
+
+   <%= link_to "Delete", learning_entry_path(entry), data:{
+     turbo_method: :delete,
+     turbo_confirm:"Are you sure?"
+     } %>
    
    </div>
 

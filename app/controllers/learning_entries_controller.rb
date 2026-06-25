@@ -31,6 +31,12 @@ class LearningEntriesController < ApplicationController
         end
     end
 
+    def destroy
+        @entry = LearningEntry.find(params[:id])
+        @entry.destroy
+        redirect_to learning_entries_path
+    end
+
     private
 
     def entry_params
