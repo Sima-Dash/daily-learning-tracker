@@ -1,23 +1,33 @@
 # Daily Learning Tracker
 
 ## Project Overview
+Daily Learning Tracker is a beginner-friendly Ruby on Rails project created to track daily learning activities.
 
-This project is built using Ruby on Rails.
-
-The purpose of this project is to track daily learning progress and practice Rails fundamentals.
+Users can:
+- Add learning entries
+- View saved entries
+- Edit existing entries
+- Delete entries
+- Store notes for learning progress
 
 ---
 
-## Features Completed
+## Features
 
-- Create learning entry
-- View learning entries
-- Edit learning entries
-- Rails routing
-- Controllers
-- Views
-- Models
-- Database migration
+### Create
+Add a new learning entry.
+
+### Read
+View all saved entries.
+
+### Update
+Edit existing entries.
+
+### Delete
+Remove entries.
+
+### Validation
+Required fields cannot be empty.
 
 ---
 
@@ -25,27 +35,52 @@ The purpose of this project is to track daily learning progress and practice Rai
 
 - Ruby
 - Ruby on Rails
-- Git
-- GitHub
-- VS Code
+- HTML
+- CSS
 
 ---
 
-## Learning Summary
+## Project Structure
 
-This week I learned:
+Model:
+LearningEntry
 
-- Rails project structure
-- MVC architecture
-- Routing
-- CRUD basics
-- Database migration
-- Git commit workflow
+Views:
+- index
+- new
+- edit
+
+Controller:
+LearningEntriesController
 
 ---
 
-## Future Improvements
+## How To Run
 
-- Delete feature
-- Validation
-- Better UI
+1. Clone repository
+
+2. Install gems
+
+bundle install
+
+3. Start server
+
+rails server
+
+4. Open browser
+
+http://127.0.0.1:3000
+
+---
+
+## Learning Outcome
+
+This project helped me practice:
+
+- Rails MVC
+- Routes
+- CRUD
+- Database integration
+- Validations
+- Forms
+- Basic UI improvement
