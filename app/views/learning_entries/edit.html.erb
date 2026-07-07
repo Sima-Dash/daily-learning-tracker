@@ -1,7 +1,7 @@
 <h1>Edit Learning Entry</h1>
 
 <% if @entry.errors.any? %>
-   <h3>Please fix the errors</h3>
+   <h3>Please fix the following errors:</h3>
 
    <ul>
       <% @entry.errors.full_messages.each do |message| %>

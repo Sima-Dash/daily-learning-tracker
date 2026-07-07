@@ -1,11 +1,13 @@
 <h1>Daily Learning Tracker</h1>
 
-<%= link_to "Add Entry", new_learning_entry_path %>
+<%= link_to "Add New Entry", new_learning_entry_path, class: "button" %>
 
-<hr>
+<% if @entries.any? %>
 
 <% @entries.each do |entry| %>
-  <div>
+
+  <div class="entry-card">
+
    <p>
      <strong>Date:</strong>
      <%= entry.date %>
@@ -26,14 +28,21 @@
      <%= entry.notes %>
    </p>
 
-   <%= link_to "Edit", edit_learning_entry_path(entry) %>
+  <div class="entry-actions">
+   <%= link_to "Edit", edit_learning_entry_path(entry), class: "button" %>
 
-   <%= link_to "Delete", learning_entry_path(entry), data:{
+   <%= link_to "Delete", learning_entry_path(entry), class: "button", data:{
      turbo_method: :delete,
      turbo_confirm:"Are you sure?"
      } %>
-   
    </div>
 
-  <hr>
+   </div>
+
+<% end %>
+
+<% else %>
+
+  <p>No learning entries found.</p>
+
 <% end %>
