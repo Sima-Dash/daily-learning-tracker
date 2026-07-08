@@ -1,6 +1,9 @@
 <h1>Edit Learning Entry</h1>
 
+<div class="form-container">
+
 <% if @entry.errors.any? %>
+  <div class="error-box">
    <h3>Please fix the following errors:</h3>
 
    <ul>
@@ -8,6 +11,7 @@
          <li><%= message %></li>
       <% end %>
    </ul>
+  </div>
 <% end %>
 
 <%= form_with model:@entry do |f| %>
@@ -31,6 +35,12 @@
         <%= f.text_area :notes %>
     </p>
 
-    <%= f.submit "Update" %>
+    <%= f.submit "Update", class: "button" %>
 <% end %>
+
+</div>
+
+<p>
+    <%= link_to "Back", learning_entries_path, class: "button" %>
+</p>
     
