@@ -1,48 +1,55 @@
-<h1>Daily Learning Tracker</h1>
+<div class="container mt-5">
 
-<%= link_to "Add New Entry", new_learning_entry_path, class: "button" %>
+<h1 class="text-center text-primary mb-4">Daily Learning Tracker</h1>
+
+<%= link_to "Add New Entry", new_learning_entry_path, class: "btn btn-success mb-4" %>
 
 <% if @entries.any? %>
 
 <% @entries.each do |entry| %>
 
-  <div class="entry-card">
+  <div class="card shadow-sm mb-4">
 
-   <p>
+  <div class="card-body">
+
+   <p class="card-text">
      <strong>Date:</strong>
      <%= entry.date %>
    </p>
 
-   <p>
-     <strong>Topic:</strong>
+   <h5 class="card-title text-primary">
      <%= entry.topic %>
-   </p>
+   </h5>
 
-   <p>
+   <p class="card-text">
      <strong>Hours:</strong>
      <%= entry.hours %>
    </p>
 
-   <p>
+   <p class="card-text">
      <strong>Notes:</strong>
      <%= entry.notes %>
    </p>
 
-  <div class="entry-actions">
-   <%= link_to "Edit", edit_learning_entry_path(entry), class: "button" %>
+  <div class="d-flex gap-2 mt-3">
+   <%= link_to "Edit", edit_learning_entry_path(entry), class: "btn btn-warning me-2" %>
 
-   <%= link_to "Delete", learning_entry_path(entry), class: "button", data:{
+   <%= link_to "Delete", learning_entry_path(entry), class: "btn btn-danger", data:{
      turbo_method: :delete,
      turbo_confirm:"Are you sure?"
      } %>
    </div>
 
-   </div>
+  </div>
+
+</div>
 
 <% end %>
 
 <% else %>
 
-  <p>No learning entries found.</p>
+  <p class="text-center text-muted mt-5">No learning entries found.</p>
 
 <% end %>
+
+</div>

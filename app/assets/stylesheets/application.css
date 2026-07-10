@@ -1,6 +1,7 @@
 h1 {
     color: #2c3e50;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 a {
@@ -15,16 +16,26 @@ a:hover {
 /* Entry Card */
 
 .entry-card {
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    border-radius: 8px;
+    background: #ffffff;
+    border-radius: 12px;
     padding: 20px;
     margin-bottom:20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.entry-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .entry-card p {
     margin: 10px 0;
+}
+
+.entry-card strong {
+    color: #0d6efd;
+    font-weight: bold;
 }
 
 .entry-actions {
@@ -36,66 +47,13 @@ a:hover {
     font-weight: bold;
 }
 
-/* Add Button */
-
-.button {
-    display: inline-block;
-    padding: 8px 15px;
-    background-color: #3498db;
-    color: white;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-.button:hover {
-    background-color: #2980b9;
-}
-
-/* Form Container */
-
-.form-container {
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 25px;
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Form Fields */
-
-.form-container p {
-    margin-bottom: 15px;
-}
-
-.form container label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.form-container input,
-.form-container textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.form-container textarea {
-    min-height: 120px;
-}
-
 /* Error Box */
 
 .error-box {
-    background-color: #ffe6e6;
-    border: 1px solid #ff4d4d;
-    color: #b30000;
+    background-color: #f8d7da;
+    color: #721c24;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 
@@ -105,4 +63,19 @@ a:hover {
 
 .error-box ul {
     margin-bottom: 0;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 5px rgba(13, 110, 253, .3);
 }
