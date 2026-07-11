@@ -1,0 +1,19 @@
+<h1 class="text-center text-primary mb-4">Daily Learning Tracker</h1>
+
+<%= link_to "Add New Entry", new_learning_entry_path, class: "btn btn-success mb-4" %>
+
+<% if @entries.any? %>
+
+<% @entries.each do |entry| %>
+
+  <%= render "learning_entry", entry: entry %>
+
+<% end %>
+
+<% else %>
+
+  <p class="text-center text-muted mt-5">No learning entries found.</p>
+
+<% end %>
+
+
