@@ -11,7 +11,7 @@ class LearningEntriesController < ApplicationController
         @entry= LearningEntry.new(entry_params)
         
         if @entry.save
-            redirect_to learning_entries_path
+            redirect_to learning_entries_path, notice: "Learning entry created successfully ."
         else
             render :new, status: :unprocessable_entity
         end
@@ -25,7 +25,7 @@ class LearningEntriesController < ApplicationController
         @entry = LearningEntry.find(params[:id])
 
         if @entry.update(entry_params)
-            redirect_to learning_entries_path
+            redirect_to learning_entries_path, notice: "Learning entry updated successfully."
         else
             render :edit
         end
@@ -34,7 +34,7 @@ class LearningEntriesController < ApplicationController
     def destroy
         @entry = LearningEntry.find(params[:id])
         @entry.destroy
-        redirect_to learning_entries_path
+        redirect_to learning_entries_path, notice: "Learning entry deleted successfully."
     end
 
     private
