@@ -1,46 +1,31 @@
-<h1>Edit Learning Entry</h1>
+<div class="container mt-5">
 
-<div class="form-container">
+  <div class="row justify-content-center">
 
-<% if @entry.errors.any? %>
-  <div class="error-box">
-   <h3>Please fix the following errors:</h3>
+    <div class="col-md-8 col-lg-6">
 
-   <ul>
-      <% @entry.errors.full_messages.each do |message| %>
-         <li><%= message %></li>
-      <% end %>
-   </ul>
+      <div class="card shadow-lg">
+
+        <div class="card-body">
+
+          <h2 class="text-warning text-center mb-4">
+            Edit Learning Entry
+          </h2>
+
+          <%= render "form", entry: @entry %>
+
+          <div class="mt-4">
+
+            <%= link_to "⬅️ Back", learning_entries_path, class: "btn btn-outline-secondary" %>
+
+          </div>
+
+        </div>
+      
+      </div>
+
+    </div>
+
   </div>
-<% end %>
-
-<%= form_with model:@entry do |f| %>
-    <p>
-        <%= f.label :date %>
-        <%= f.date_field :date %>
-    </p>
-
-    <p>
-        <%= f.label :topic %>
-        <%= f.text_field :topic %>
-    </p>
-
-    <p>
-        <%= f.label :hours %>
-        <%= f.number_field :hours %>
-    </p>
-
-    <p>
-        <%= f.label :notes %>
-        <%= f.text_area :notes %>
-    </p>
-
-    <%= f.submit "Update", class: "button" %>
-<% end %>
 
 </div>
-
-<p>
-    <%= link_to "Back", learning_entries_path, class: "button" %>
-</p>
-    

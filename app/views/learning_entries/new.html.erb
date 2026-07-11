@@ -1,77 +1,31 @@
-<h1>Add Learning Entry</h1>
-
 <div class="container mt-5">
+
   <div class="row justify-content-center">
+
     <div class="col-md-8 col-lg-6">
-      <div class="card shadow">
+
+      <div class="card shadow-lg">
+
         <div class="card-body">
 
-<% if @entry.errors.any? %>
-  <div class="error-box">
-    <h3>
-      <%= pluralize(@entry.errors.count, "error") %>
-      prevented this entry from saving:
-    </h3>
+          <h2 class="text-success text-center mb-4">
+            Add Learning Entry
+          </h2>
 
-    <ul>
-      <% @entry.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+          <%= render "form", entry: @entry %>
 
-<%= form_with model:@entry do |f| %>
-   <p class="mb-3">
-      <%= f.label :date do %>
-        Date <span class="text-danger">*</span>
-      <% end %>
+          <div class="mt-4">
 
-      <%= f.date_field :date,
-            class: "form-control",
-            required: true %>
-   </p>
+            <%= link_to "⬅️ Back", learning_entries_path, class: "btn btn-outline-secondary" %>
 
-   <p class="mb-3">
-      <%= f.label :topic do %>
-        Topic <span class="text-danger">*</span>
-      <% end %>
+          </div>
 
-      <%= f.text_field :topic,
-            class: "form-control",
-            required: true %>
-   </p>
-
-   <p class="mb-3">
-      <%= f.label :hours do %>
-        Hours <span class="text-danger">*</span>
-      <% end %>
-
-      <%= f.number_field :hours,
-            class: "form-control",
-            required: true %>
-   </p>
-
-   <p class="mb-3">
-      <%= f.label :notes do %>
-        Notes <span class="text-danger">*</span>
-      <% end %>
-
-      <%= f.text_area :notes,
-            class: "form-control",
-            rows: 4,
-            required: true %>
-   </p>
-
-   <%= f.submit "Create Entry", class: "btn btn-primary" %>
-<% end %>
+        </div>
+      
+      </div>
 
     </div>
-   </div>
-  </div>
- </div>
-</div>
 
-<div class="mt-3">
-  <%= link_to "<- Back", learning_entries_path, class: "btn btn-outline-secondary" %>
+  </div>
+
 </div>
