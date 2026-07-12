@@ -3,41 +3,31 @@
 ## Project Overview
 Daily Learning Tracker is a beginner-friendly Ruby on Rails project created to track daily learning activities.
 
-Users can:
-- Add learning entries
-- View saved entries
+## Features
+- Create learning entries
+- View all learning entries
 - Edit existing entries
 - Delete entries
-- Store notes for learning progress
-
----
-
-## Features
-
-### Create
-Add a new learning entry.
-
-### Read
-View all saved entries.
-
-### Update
-Edit existing entries.
-
-### Delete
-Remove entries.
-
-### Validation
-Required fields cannot be empty.
-
+- Form validation
+- Flash messages
+- Bootstrap responsive UI
+- Required field validation
 ---
 
 ## Technologies Used
 
 - Ruby
 - Ruby on Rails
-- HTML
-- CSS
+- SQLite3
+- Bootstrap 5
+- Dart Sass
+---
 
+## CRUD Operations
+Create
+Read
+Update
+Delete
 ---
 
 ## Project Structure

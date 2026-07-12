@@ -1,16 +1,34 @@
-# Testing
+# Testing Notes
 
-Create → Working
+## CRUD Testing
 
-Read → Working
+### Create
 
-Edit → Working
+* Successfully created a new learning entry.
 
-Update → Working
+### Read
 
-Issue:
-No validation added yet
+* Entries displayed correctly.
 
-Future:
-Delete feature
-Better UI
+### Update
+
+* Existing entries updated successfully.
+
+### Delete
+
+* Entries deleted successfully after confirmation.
+
+## Validation Testing
+
+* Required fields prevented empty submission.
+* Error messages displayed correctly.
+
+## UI Testing
+
+* Bootstrap cards displayed properly.
+* Buttons aligned correctly.
+* Responsive layout worked on different screen sizes.
+
+## Result
+
+All CRUD operations tested successfully.
