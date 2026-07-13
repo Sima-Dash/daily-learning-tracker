@@ -47,6 +47,15 @@
 <% end %>
 
 <% else %>
+ <% if params[:search].present? %>
+   <div class="alert alert-warning text-center">
+
+     No learning entries found for
+     <strong>"<%= params[:search] %>"</strong>.
+
+    </div>
+
+  <% else %>
 
   <div class="alert alert-info text-center">
 
@@ -54,6 +63,10 @@
   
   </div>
 
+  <% end %>
+
 <% end %>
+
+
 
 
