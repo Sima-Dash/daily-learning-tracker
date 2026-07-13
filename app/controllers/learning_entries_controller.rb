@@ -1,6 +1,10 @@
 class LearningEntriesController < ApplicationController
     def index
-        @entries = LearningEntry.all
+        if params[:search].present?
+            @entries = LearningEntry.where("topic LIKE ?", "%#{params[:search]}%")
+        else
+           @entries = LearningEntry.all
+        end
     end
     
     def new
