@@ -12,6 +12,32 @@
 
 </div>
 
+<!-- SEARCH BAR START -->
+
+    <div class="row mb-4">
+
+      <div class="col-md-8">
+
+        <%= form_with url: learning_entries_path,
+          method: :get,
+          local: true,
+          class: "d-flex gap-2" do %>
+
+         <%= text_field_tag :search, 
+                            params[:search], 
+                            class: "form-control", 
+                            placeholder: "🔍 Search by topic..." %>
+
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+
+          <%= link_to "Reset", learning_entries_path, class: "btn btn-secondary" %>
+
+        <% end %>
+
+      </div>
+
+    </div>
+
 <% if @entries.any? %>
 
 <% @entries.each do |entry| %>
