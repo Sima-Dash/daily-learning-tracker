@@ -235,3 +235,85 @@ I understood:
 - Difference between ERB and Slim
 
 These concepts will be used to implement Sign Up, Login, Logout, and Session Management in the next phase of the project.
+
+### Date: 18 July
+# Password Hashing
+
+## What is Password Hashing?
+
+Password hashing is the process of converting a plain password into an unreadable string (hash) before storing it in the database.
+
+Example:
+
+Plain Password
+
+hello123
+
+↓
+
+Hash Function
+
+↓
+
+$2a$12$ksjdhf82398jsjd82...
+
+Only the hashed password is stored in the database.
+
+## Why do we use Password Hashing?
+
+- Passwords remain secure.
+- Plain passwords are never stored.
+- Even if the database is leaked, the original password is difficult to recover.
+- Improves application security.
+
+## Authentication Flow
+
+User
+↓
+Enter Password
+↓
+Server
+↓
+Hash Password
+↓
+Store Hash
+↓
+Database
+
+## Login Flow
+
+User
+↓
+Enter Password
+↓
+Hash Password
+↓
+Compare with Database Hash
+↓
+Login Successful
+
+## Plain Password vs Hashed Password
+
+Without Hashing
+
+Email: sima@gmail.com
+
+Password: hello123
+
+With Hashing
+
+Email: sima@gmail.com
+
+Password: $2a$12$ksjdhf82398jsjd82...
+
+## Summary
+
+Today I understood:
+
+- What Password Hashing is
+- Why passwords should never be stored in plain text
+- How password hashing improves security
+- Authentication flow during Sign Up
+- Authentication flow during Login
+
+Implementation will be done later while building Sign Up and Login functionality.
