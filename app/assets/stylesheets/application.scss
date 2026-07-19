@@ -55,6 +55,8 @@ textarea {
 
 .alert {
     border-radius: 12px;
+    margin-bottom :20px;
+    font-weight :600;
 }
 
 .card-title {
@@ -82,4 +84,55 @@ textarea {
 
 .search-form .btn-primary {
   margin-right: 8px;
+}
+
+/* Sign Up Page */
+
+.signup-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.signup-card .card-body {
+  padding: 35px;
+}
+
+.signup-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.text-danger {
+  font-weight: bold;
+}
+
+.btn-success {
+  border-radius: 10px;
+}
+
+.btn-outline-secondary {
+  border-radius: 10px;
+}
+
+.btn-lg {
+  padding: 12px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  .signup-card .card-body {
+    padding: 25px;
+  }
+
+  .signup-title {
+    font-size: 1.6rem;
+  }
+
 }

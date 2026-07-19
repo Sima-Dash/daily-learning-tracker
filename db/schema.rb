@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_06_18_045307) do
+ActiveRecord::Schema[8.1].define(version: 2026_07_17_140604) do
   create_table "learning_entries", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.date "date"
     t.integer "hours"
     t.text "notes"
     t.string "topic"
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.string "email"
+    t.string "name"
+    t.string "password_digest"
     t.datetime "updated_at", null: false
   end
 end
