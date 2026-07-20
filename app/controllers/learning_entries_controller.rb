@@ -1,4 +1,7 @@
 class LearningEntriesController < ApplicationController
+
+  before_action :require_login
+  
     def index
         if params[:search].present?
             @entries = LearningEntry.where("topic LIKE ?", "%#{params[:search]}%")
