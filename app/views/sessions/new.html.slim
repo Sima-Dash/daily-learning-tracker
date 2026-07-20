@@ -1,0 +1,61 @@
+.container.mt-5
+
+  .row.justify-content-center
+
+    .col-12.col-sm-10.col-md-8.col-lg-6.col-xl-5
+
+      .card.shadow-lg
+
+        .card-body.p-4
+
+          h2.text-center.text-primary.mb-2
+            | Welcome Back
+
+          p.text-center.text-muted.mb-4
+            | Login to your account
+
+          = form_with url: login_path, method: :post, local: true do |form|
+
+            .mb-3
+
+              = form.label :email do
+
+                | Email 
+                span.text-danger *
+
+              = form.email_field :email,
+                  class: "form-control",
+                  placeholder: "Enter your email",
+                  required: true
+
+            .mb-3
+
+              = form.label :password do
+
+                | Password
+                span.text-danger *
+
+              = form.password_field :password,
+                  class: "form-control",
+                  placeholder: "Enter your password",
+                  required: true
+
+            .d-grid.mt-4
+
+              = form.submit "Login",
+                  class: "btn btn-primary"
+
+          .text-center.mt-4
+
+            p.mb-2
+              | Dont't have an account?
+
+            = link_to "Create Account",
+                new_user_path,
+                class: "btn btn-outline-success"
+
+          .text-center.mt-3
+
+            = link_to "⬅️ Back to Home",
+                learning_entries_path,
+                class: "btn btn-outline-secondary"

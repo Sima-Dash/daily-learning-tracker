@@ -246,15 +246,10 @@ Password hashing is the process of converting a plain password into an unreadabl
 Example:
 
 Plain Password
-
 hello123
-
 ↓
-
 Hash Function
-
 ↓
-
 $2a$12$ksjdhf82398jsjd82...
 
 Only the hashed password is stored in the database.
@@ -317,3 +312,38 @@ Today I understood:
 - Authentication flow during Login
 
 Implementation will be done later while building Sign Up and Login functionality.
+
+### Date: 20 July
+# Authentication Logic Flow
+
+Browser
+↓
+Login Form
+↓
+SessionsController#create
+↓
+Find User
+↓
+Password Verify
+↓
+Session Create
+↓
+Dashboard
+
+# Session Creation Flow
+
+User Login
+↓
+Email
+↓
+Password
+↓
+Controller
+↓
+User Found
+↓
+Password Correct
+↓
+session[:user_id] = user.id
+↓
+Logged In
