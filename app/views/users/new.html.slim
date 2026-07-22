@@ -3,76 +3,68 @@
     .col-12.col-md-8.col-lg-6
       .card.signup-card
         .card-body.p-4
-          h2.signup-title.text-center-success.mb-4
+
+          h2.signup-title.text-center.text-success.mb-4
             | Create Account
+
           - if @user.errors.any?
-
             .alert.alert-danger
-
-              h5 = pluralize(@user.errors.count, "error")
-                 | prevented this account from being created.
+              h5
+                = pluralize(@user.errors.count, "error")
+                |  prevented this account from being created.
 
               ul.mb-0
-
                 - @user.errors.full_messages.each do |message|
-
                   li = message
 
-                  = form_with model: @user, local: true do |form|
+          = form_with model: @user, local: true do |form|
 
-                  .mb-3
+            .mb-3
+              = form.label :name, class: "form-label" do
+                | Full Name
+                span.text-danger *
 
-                    = form.label :name, class: "form-label" do
+              = form.text_field :name,
+                  class: "form-control",
+                  placeholder: "Enter your full name",
+                  required: true
 
-                      | Full name
+            .mb-3
+              = form.label :email, class: "form-label" do
+                | Email
+                span.text-danger *
 
-                      span.text-danger *
+              = form.email_field :email,
+                  class: "form-control",
+                  placeholder: "Enter your email",
+                  required: true
 
-                    = form.text_field :name,
-                        class: "form-control",
-                        placeholder: "Enter your full name"
+            .mb-3
+              = form.label :password, class: "form-label" do
+                | Password
+                span.text-danger *
 
-                   .mb-3
+              = form.password_field :password,
+                  class: "form-control",
+                  placeholder: "Enter your password",
+                  required: true,
+                  autocomplete: "new-password"
 
-                     = form.label :email, class: "form-label" do
+            .mb-3
+              = form.label :password_confirmation, class: "form-label" do
+                | Confirm Password
+                span.text-danger *
 
-                       | Email
+              = form.password_field :password_confirmation,
+                  class: "form-control",
+                  placeholder: "Confirm your password",
+                  required: true,
+                  autocomplete: "new-password"
 
-                       span.text-danger *
+            .d-grid.mt-4
+              = form.submit "Sign Up", class: "btn btn-success btn-lg"
 
-                    = form.email_field :email,
-                        class: "form-control",
-                        placeholder: "Enter your email"
-
-                    .mb-3
-                      
-                      = form.label :password, class: "form-label" do
-
-                        | Password
-
-                        span.text-danger *
-
-                      = form.password_field :password,
-                          class: "form-control",
-                          placeholder: "Enter your password"
-
-                    .mb-3
-
-                      = label_tag :password_confirmation, class: "form_label" do
-
-                        | Confirm Password 
-
-                        span.text-danger *
-
-                      = password_field_tag :password_confirmation,
-                          nil,
-                          class: "form-control",
-                          placeholder: "Confirm your password"
-
-                    .d-grid.mt-4
-
-                      = form.submit "Sign Up", class: "btn btn-success btn-lg"
-
-                    .mt-4.text-center
-
-                      = link_to "⬅️ Back", learning_entries_path, class: "btn btn-outline-secondary"
+            .mt-4.text-center
+              = link_to "⬅️ Back",
+                  learning_entries_path,
+                  class: "btn btn-outline-secondary"
