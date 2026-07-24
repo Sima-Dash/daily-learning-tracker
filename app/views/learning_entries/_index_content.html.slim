@@ -1,0 +1,67 @@
+.d-flex.justify-content-between.align-items-center.mb-4
+  
+  div
+
+    h1.page-title.text-primary.mb-1
+      | Daily Learning Tracker
+
+    p.text-muted
+      | Track your daily learning progress.
+
+  .d-flex.gap-2
+
+    = link_to "➕ Add New Entry",
+        new_learning_entry_path,
+        class: "btn btn-success px-4"
+
+    = button_to "Logout",
+        logout_path,
+        method: :delete,
+        class: "btn btn-danger"
+
+/ SEARCH BAR START
+
+.row.mb-4
+
+  .col-md-8
+
+    = form_with url: learning_entries_path,
+        method: :get,
+        local: true,
+        class: "search-form d-flex gap-2" do
+
+      = text_field_tag :search,
+          params[:search],
+          class: "form-control",
+          placeholder: "🔍 Search by topic..."
+
+      = submit_tag "Search",
+          class: "btn btn-primary"
+
+      = link_to "Reset",
+          learning_entries_path,
+          class: "btn btn-secondary"
+
+- if @entries.any?
+
+  - @entries.each do |entry|
+
+    = render "learning_entry",
+        entry: entry
+
+- else
+
+  - if params[:search].present?
+
+    .alert.alert-warning.text-center
+
+      | No learning entries found for 
+      strong
+        | "#{params[:search]}"
+      | .
+
+  - else
+
+    .alert.alert-info.text-center
+
+      | No learning entries found.

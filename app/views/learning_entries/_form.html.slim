@@ -1,0 +1,79 @@
+- if entry.errors.any?
+
+  .alert.alert-danger
+
+    h5
+
+      = pluralize(entry.errors.count, "error")
+      
+      | prevented this entry from saving:
+
+    ul.mb-0
+
+      - entry.errors.full_messages.each do |message|
+
+        li = message
+
+p.text-muted.mb-4
+
+  span.text-danger
+    | *
+
+  | indicates required fields.
+
+= form_with model: entry do |f|
+
+  .mb-3
+
+    = f.label :date do
+
+      | Date 
+
+      span.text-danger *
+
+    = f.date_field :date,
+        class: "form-control",
+        required: true
+
+  .mb-3
+
+    = f.label :topic do
+
+      | Topic 
+
+      span.text-danger *
+
+    = f.text_field :topic,
+        class: "form-control",
+        placeholder: "Enter topic",
+        required: true
+
+  .mb-3
+
+    = f.label :hours do
+
+      | Hours 
+
+      span.text-danger *
+
+    = f.number_field :hours,
+        class: "form-control",
+        placeholder: "Enter hours",
+        required: true
+
+  .mb-3
+
+    = f.label :notes do
+
+      | Notes
+
+      span.text-danger *
+
+    = f.text_area :notes,
+         class: "form-control",
+         rows: 5,
+         placeholder: "Write your learning notes...",
+         required: true
+
+  .d-grid
+  = f.submit(entry.persisted? ? "💾 Update Entry" : "✅ Create Entry", class: "btn btn-primary btn-lg w-100")

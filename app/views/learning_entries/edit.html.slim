@@ -1,0 +1,22 @@
+.container.mt-5
+  
+  .row.justify-content-center
+
+    .col-md-8.col-lg-6
+
+      .card.shadow-lg
+
+        .card-body
+
+          h2.text-warning.text-center.mb-4
+
+            | Edit Learning Entry
+
+          = render "form",
+              entry: @entry
+
+          .mt-4
+
+            = link_to "⬅️ Back",
+                learning_entries_path,
+                class: "btn btn-outline-secondary"
