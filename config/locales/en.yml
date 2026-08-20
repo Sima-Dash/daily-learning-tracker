@@ -29,3 +29,16 @@
 
 en:
   hello: "Hello world"
+
+  navigation:
+    daily_learning_tracker: "Daily Learning Tracker"
+    add_new_entry: "Add New Entry"
+    logout: "Log out"
+
+  learning_entries:
+    tagline: "Track your daily learning progress."
+    search_placeholder: "Search by topic..."
+    search: "Search"
+    reset: "Reset"
+    no_entries_found: "No learning entries found."
+    no_entries_found_for: "No learning entries found for %{search}."

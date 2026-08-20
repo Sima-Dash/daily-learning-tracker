@@ -1,0 +1,15 @@
+ja:
+  hello: "こんにちは"
+
+  navigation:
+    daily_learning_tracker: "デイリー学習トラッカー"
+    add_new_entry: "新しい記録を追加"
+    logout: "ログアウト"
+
+  learning_entries:
+    tagline: "毎日の学習の進捗を記録しましょう。"
+    search_placeholder: "トピックで検索..."
+    search: "検索"
+    reset: "リセット"
+    no_entries_found: "学習記録が見つかりません。"
+    no_entries_found_for: "%{search} に一致する学習記録が見つかりません。"

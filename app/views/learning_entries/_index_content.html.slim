@@ -4,20 +4,20 @@ nav.navbar.bg-light.shadow-sm.rounded.mb-4
 
     .mb-3.mb-md-0
 
-      = link_to "Daily Learning Tracker",
+      = link_to t("navigation.daily_learning_tracker"),
         learning_entries_path,
         class: "navbar-brand fw-bold text-primary d-block"
 
       p.text-muted.mb-0
-        | Track your daily learning progress.
+        = t("learning_entries.tagline")
 
     .d-flex.flex-column.flex-sm-row.gap-2.mt-2.mt-md-0
 
-      = link_to "➕ Add New Entry",
+      = link_to t("navigation.add_new_entry"),
           new_learning_entry_path,
           class: "btn btn-success px-4" 
 
-      = button_to "Logout", 
+      = button_to t("navigation.logout"), 
           logout_path, 
           method: :delete, 
           class: "btn btn-danger px-4" 
@@ -36,12 +36,12 @@ nav.navbar.bg-light.shadow-sm.rounded.mb-4
       = text_field_tag :search,
           params[:search],
           class: "form-control",
-          placeholder: "🔍 Search by topic..."
+          placeholder: t("learning_entries.search_placeholder")
 
-      = submit_tag "Search",
+      = submit_tag t("learning_entries.search"),
           class: "btn btn-primary"
 
-      = link_to "Reset",
+      = link_to t("learning_entries.reset"),
           learning_entries_path,
           class: "btn btn-secondary"
 
@@ -57,14 +57,9 @@ nav.navbar.bg-light.shadow-sm.rounded.mb-4
   - if params[:search].present?
 
     .alert.alert-warning.text-center
-
-      | No learning entries found for 
-      strong
-        | "#{params[:search]}"
-      | .
-
+      = t("learning_entries.no_entries_found_for", search: params[:search])
   - else
 
     .alert.alert-info.text-center
 
-      | No learning entries found.
+      = t("learning_entries.no_entries_found")
