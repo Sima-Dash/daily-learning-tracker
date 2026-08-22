@@ -6,10 +6,105 @@ ja:
     add_new_entry: "新しい記録を追加"
     logout: "ログアウト"
 
+  flash:
+    login_required: "先にログインしてください。"
+
+    learning_entries: 
+      created: "学習記録を作成しました。"
+      updated: "学習記録を更新しました。"
+      deleted: "学習記録を削除しました。" 
+
+    sessions: 
+      login_success: "ログインに成功しました。"
+      invalid_credentials: "メールアドレスまたはパスワードが正しくありません。"
+      logout_success: "ログアウトしました。" 
+
+    users: 
+      account_created: "アカウントを作成しました。" 
+
   learning_entries:
+    add_learning_entry: "学習記録を追加"  
     tagline: "毎日の学習の進捗を記録しましょう。"
     search_placeholder: "トピックで検索..."
     search: "検索"
     reset: "リセット"
+
+    edit_learning_entry: "学習記録を編集" 
+    back: "戻る" 
+    
     no_entries_found: "学習記録が見つかりません。"
     no_entries_found_for: "%{search} に一致する学習記録が見つかりません。"
+
+    required_fields_note: "は必須項目です。"
+
+    date: "日付"
+    topic: "トピック"
+    hours: "学習時間"
+    notes: "メモ"
+
+    topic_placeholder: "トピックを入力してください"
+    hours_placeholder: "学習時間を入力してください"
+    notes_placeholder: "学習内容を入力してください..."
+
+    create: "記録を作成"
+    update: "記録を更新"
+
+    errors:
+      one: "%{count} 件のエラーにより、この記録を保存できませんでした。"
+      other: "%{count} 件のエラーにより、この記録を保存できませんでした。"
+
+    card: 
+      hours: "%{hours} 時間" 
+      date: "日付:" 
+      notes: "メモ:" 
+
+    actions: 
+      edit: "編集"
+      delete: "削除"
+      
+    confirmations: 
+      delete: "削除してもよろしいですか？"
+  
+  users:
+    create_account: "アカウントを作成"
+
+    errors:
+      title:
+        one: "%{count}件のエラーにより、アカウントを作成できませんでした。"
+        other: "%{count}件のエラーにより、アカウントを作成できませんでした。"
+
+    full_name: "氏名"
+    full_name_placeholder: "氏名を入力してください"
+
+    email: "メールアドレス"
+    email_placeholder: "メールアドレスを入力してください"
+
+    password: "パスワード"
+    password_placeholder: "パスワードを入力してください"
+
+    password_confirmation: "パスワード（確認）"
+    password_confirmation_placeholder: "パスワードをもう一度入力してください"
+
+    sign_up: "登録"
+    back: "戻る"
+      
+  application:
+    title: "デイリー学習トラッカー"
+
+  sessions:
+    welcome_back: "おかえりなさい"
+    login_message: "アカウントにログインしてください"
+    email: "メールアドレス"
+    email_placeholder: "メールアドレスを入力"
+    password: "パスワード"
+    password_placeholder: "パスワードを入力"
+    login: "ログイン"
+    no_account: "アカウントをお持ちでないですか？"
+    create_account: "アカウントを作成"
+    back_to_home: "ホームに戻る"
+
+  common:
+    close: "閉じる"
+
+  footer:
+    copyright: "© 2026 Sima Dash. 無断転載を禁じます。"

@@ -3,8 +3,7 @@
   .alert.alert-danger
 
     h5
-
-      = pluralize(entry.errors.count, "error")
+      = t("learning_entries.errors", count: entry.errors.count)
       
       | prevented this entry from saving:
 
@@ -15,19 +14,17 @@
         li = message
 
 p.text-muted.mb-4
-
   span.text-danger
     | *
 
-  | indicates required fields.
+  = t("learning_entries.required_fields_note")
 
 = form_with model: entry do |f|
 
   .mb-3
 
     = f.label :date do
-
-      | Date 
+      = t("learning_entries.date")
 
       span.text-danger *
 
@@ -38,42 +35,39 @@ p.text-muted.mb-4
   .mb-3
 
     = f.label :topic do
-
-      | Topic 
+      = t("learning_entries.topic") 
 
       span.text-danger *
 
     = f.text_field :topic,
         class: "form-control",
-        placeholder: "Enter topic",
+        placeholder: t("learning_entries.topic_placeholder"), 
         required: true
 
   .mb-3
 
     = f.label :hours do
-
-      | Hours 
+      = t("learning_entries.hours") 
 
       span.text-danger *
 
     = f.number_field :hours,
         class: "form-control",
-        placeholder: "Enter hours",
+        placeholder: t("learning_entries.hours_placeholder"), 
         required: true
 
   .mb-3
 
     = f.label :notes do
-
-      | Notes
+      = t("learning_entries.notes")
 
       span.text-danger *
 
     = f.text_area :notes,
          class: "form-control",
          rows: 5,
-         placeholder: "Write your learning notes...",
+         placeholder: t("learning_entries.notes_placeholder"),
          required: true
 
   .d-grid
-  = f.submit(entry.persisted? ? "💾 Update Entry" : "✅ Create Entry", class: "btn btn-primary btn-lg w-100")
+    = f.submit(entry.persisted? ? t("learning_entries.update") : t("learning_entries.create"), class: "btn btn-primary btn-lg w-100")

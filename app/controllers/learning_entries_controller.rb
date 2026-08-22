@@ -18,7 +18,8 @@ class LearningEntriesController < ApplicationController
         @entry= LearningEntry.new(entry_params)
         
         if @entry.save
-            redirect_to learning_entries_path, notice: "Learning entry created successfully ."
+            redirect_to learning_entries_path, 
+                        notice: I18n.t("flash.learning_entries.created") 
         else
             render :new, status: :unprocessable_entity
         end
@@ -32,7 +33,8 @@ class LearningEntriesController < ApplicationController
         @entry = LearningEntry.find(params[:id])
 
         if @entry.update(entry_params)
-            redirect_to learning_entries_path, notice: "Learning entry updated successfully."
+            redirect_to learning_entries_path, 
+                        notice: I18n.t("flash.learning_entries.updated") 
         else
             render :edit
         end
@@ -41,7 +43,8 @@ class LearningEntriesController < ApplicationController
     def destroy
         @entry = LearningEntry.find(params[:id])
         @entry.destroy
-        redirect_to learning_entries_path, notice: "Learning entry deleted successfully."
+        redirect_to learning_entries_path, 
+                    notice: I18n.t("flash.learning_entries.deleted") 
     end
 
     private

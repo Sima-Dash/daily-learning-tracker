@@ -9,55 +9,53 @@
         .card-body.p-4
 
           h2.text-center.text-primary.mb-2
-            | Welcome Back
+            = t("sessions.welcome_back") 
 
           p.text-center.text-muted.mb-4
-            | Login to your account
+            = t("sessions.login_message") 
 
           = form_with url: login_path, method: :post, local: true do |form|
 
             .mb-3
 
               = form.label :email do
-
-                | Email 
+                = t("sessions.email")  
                 span.text-danger *
 
               = form.email_field :email,
                   class: "form-control",
-                  placeholder: "Enter your email",
+                  placeholder: t("sessions.email_placeholder"), 
                   required: true,
                   autocomplete: "email"
 
             .mb-3
 
               = form.label :password do
-
-                | Password
+                = t("sessions.password") 
                 span.text-danger *
 
               = form.password_field :password,
                   class: "form-control",
-                  placeholder: "Enter your password",
+                  placeholder: t("sessions.password_placeholder"),
                   required: true,
                   autocomplete: "current-password"
 
             .d-grid.mt-4
 
-              = form.submit "Login",
+              = form.submit t("sessions.login"), 
                   class: "btn btn-primary"
 
           .text-center.mt-4
 
             p.mb-2
-              | Don't have an account?
+              = t("sessions.no_account") 
 
-            = link_to "Create Account",
+            = link_to t("sessions.create_account"), 
                 new_user_path,
                 class: "btn btn-outline-success"
 
           .text-center.mt-3
 
-            = link_to "⬅️ Back to Home",
+            = link_to t("sessions.back_to_home"), 
                 learning_entries_path,
                 class: "btn btn-outline-secondary"

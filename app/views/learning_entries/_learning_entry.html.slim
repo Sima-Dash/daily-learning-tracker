@@ -10,31 +10,31 @@
 
       span.badge.bg-success.fs-6.px-3.py-2
 
-        = "#{entry.hours} hrs"
+        = t("learning_entries.card.hours", hours: entry.hours)
 
     hr.my-3
 
     p.mb-2
 
        strong.me-1
-         | Date:
+         = t("learning_entries.card.date") 
 
        = entry.date
 
     p.mb-0
 
        strong.me-1
-         | Notes:
+         = t("learning_entries.card.notes") 
 
        = entry.notes
 
     .d-flex.flex-column.flex-sm-row.gap-2.mt-4
 
-        = link_to "✏️ Edit",
+        = link_to t("learning_entries.actions.edit"),
             edit_learning_entry_path(entry),
             class: "btn btn-warning"
 
-        = link_to "🗑️ Delete",
+        = link_to t("learning_entries.actions.delete"),
           learning_entry_path(entry),
           class: "btn btn-danger",
-          data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }
+          data: { turbo_method: :delete, turbo_confirm: t("learning_entries.confirmations.delete") }
