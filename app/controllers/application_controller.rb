@@ -5,7 +5,21 @@ class ApplicationController < ActionController::Base
   # Changes to the importmap will invalidate the etag for HTML responses
   stale_when_importmap_changes
 
+  before_action :set_locale 
+
+  def change_locale 
+    if I18n.available_locales.map(&:to_s).include?(params[:locale]) 
+      session[:locale] = params[:locale] 
+    end 
+
+    redirect_back(fallback_location: learning_entries_path) 
+  end 
+
   private
+
+  def set_locale
+    I18n.locale = session[:locale] || I18n.default_locale 
+  end
 
   def current_user
     @current_user ||= User.find_by(id: session[:user_id])

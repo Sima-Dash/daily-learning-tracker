@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
 
+  #language switch route
+  get "/set_locale/:locale", to: "application#change_locale", as: :set_locale  
+
   root "learning_entries#index"
   
 end

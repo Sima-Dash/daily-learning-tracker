@@ -5,6 +5,8 @@ ja:
     daily_learning_tracker: "デイリー学習トラッカー"
     add_new_entry: "新しい記録を追加"
     logout: "ログアウト"
+    english: "English"
+    japanese: "日本語" 
 
   flash:
     login_required: "先にログインしてください。"

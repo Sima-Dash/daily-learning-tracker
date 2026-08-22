@@ -17,6 +17,14 @@ nav.navbar.bg-light.shadow-sm.rounded.mb-4
           new_learning_entry_path,
           class: "btn btn-success px-4" 
 
+      = link_to t("navigation.english"), 
+          set_locale_path(:en), 
+          class: "btn btn-outline-primary" 
+
+      = link_to t("navigation.japanese"),  
+          set_locale_path(:ja), 
+          class: "btn btn-outline-secondary" 
+
       = button_to t("navigation.logout"), 
           logout_path, 
           method: :delete, 

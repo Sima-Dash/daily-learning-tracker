@@ -34,6 +34,8 @@ en:
     daily_learning_tracker: "Daily Learning Tracker"
     add_new_entry: "Add New Entry"
     logout: "Log out"
+    english: "English"
+    japanese: "日本語"
 
   flash:
     login_required: "Please login first." 
