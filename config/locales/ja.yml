@@ -1,6 +1,9 @@
 ja:
   hello: "こんにちは"
 
+  validation:
+    required: "このフィールドに入力してください。"
+
   navigation:
     daily_learning_tracker: "デイリー学習トラッカー"
     add_new_entry: "新しい記録を追加"

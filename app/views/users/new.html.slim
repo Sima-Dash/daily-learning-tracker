@@ -17,7 +17,7 @@
                 - @user.errors.full_messages.each do |message|
                   li = message
 
-          = form_with model: @user, local: true do |form|
+          = form_with model: @user, local: true, data: { controller: "validation", validation_message: t("validation.required") } do |form| 
 
             .mb-3
               = form.label :name, class: "form-label" do
@@ -47,6 +47,7 @@
               = form.password_field :password,
                   class: "form-control",
                   placeholder: t("users.password_placeholder"), 
+                  required: true, 
                   autocomplete: "new-password"
 
             .mb-3

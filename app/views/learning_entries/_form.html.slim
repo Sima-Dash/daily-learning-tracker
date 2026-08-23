@@ -19,7 +19,7 @@ p.text-muted.mb-4
 
   = t("learning_entries.required_fields_note")
 
-= form_with model: entry do |f|
+= form_with model: entry, data: { controller: "validation", validation_message: t("validation.required") } do |f|
 
   .mb-3
 

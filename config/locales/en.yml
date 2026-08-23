@@ -30,6 +30,9 @@
 en:
   hello: "Hello world"
 
+  validation:
+    required: "Please fill out this field."
+
   navigation:
     daily_learning_tracker: "Daily Learning Tracker"
     add_new_entry: "Add New Entry"
