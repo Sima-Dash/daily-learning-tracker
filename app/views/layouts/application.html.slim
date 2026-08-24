@@ -37,6 +37,9 @@ html
 
   body
 
+    - if logged_in?
+      = render "shared/navbar"
+
     / Flash Messages
 
     .container.mt-3

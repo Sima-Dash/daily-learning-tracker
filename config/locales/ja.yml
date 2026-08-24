@@ -10,6 +10,8 @@ ja:
     logout: "ログアウト"
     english: "English"
     japanese: "日本語" 
+    toggle_navigation: "ナビゲーションを切り替える"
+    language_switcher: "言語切り替え"
 
   flash:
     login_required: "先にログインしてください。"

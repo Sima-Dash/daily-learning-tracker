@@ -1,0 +1,32 @@
+nav.navbar.navbar-expand-lg.bg-white.border-bottom.shadow-sm.mb-4 data-controller="navbar"
+  .container
+
+    = link_to t("navigation.daily_learning_tracker"),
+        learning_entries_path,
+        class: "navbar-brand fw-bold"
+
+    button.navbar-toggler type="button" data-action="click->navbar#toggle" data-navbar-target="button" aria-controls="mainNavbar" aria-expanded="false" aria-label=t("navigation.toggle_navigation")
+      span.navbar-toggler-icon
+
+    #mainNavbar.collapse.navbar-collapse data-navbar-target="menu"
+      .navbar-nav.ms-auto.align-items-lg-center.gap-3
+
+        .nav-item
+          = link_to t("navigation.add_new_entry"),
+              new_learning_entry_path,
+              class: "btn btn-success px-3"
+
+        .nav-item.language-switcher
+          = link_to t("navigation.english"),
+              set_locale_path(:en),
+              class: I18n.locale == :en ? "btn btn-primary btn-sm" : "btn btn-outline-primary btn-sm"
+
+          = link_to t("navigation.japanese"),
+              set_locale_path(:ja),
+              class: I18n.locale == :ja ? "btn btn-primary btn-sm" : "btn btn-outline-primary btn-sm"
+
+        .nav-item
+          = button_to t("navigation.logout"),
+              logout_path,
+              method: :delete,
+              class: "btn btn-outline-danger btn-sm"

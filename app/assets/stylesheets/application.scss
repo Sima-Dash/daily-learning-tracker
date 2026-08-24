@@ -1,41 +1,43 @@
 @import "bootstrap";
 
 body {
-    background: #f4f7fb;
-    font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  font-family: Arial, sans-serif;
 }
 
 .page-title {
-    font-size: 2.3rem;
-    font-weight: bold;
+  font-size: 2.3rem;
+  font-weight: bold;
 }
 
-.container {
+.page-container {
   max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .learning-card {
-    border: none;
-    border-radius: 15px;
-    transition: 0.3s ease;
+  border: none;
+  border-radius: 15px;
+  transition: 0.3s ease;
 }
 
 .learning-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,.12);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
 .card-body {
-    padding: 25px;
+  padding: 25px;
 }
 
 .btn {
-    border-radius: 10px;
-    font-weight: 600;
+  border-radius: 10px;
+  font-weight: 600;
 }
 
 .btn:hover {
-  transform: scale(1.05);
+  transform: translateY(-1px);
 }
 
 .form-control,
@@ -46,17 +48,17 @@ textarea {
 
 .form-control:focus {
   border-color: #0d6efd;
-  box-shadow: 0 0 8px rgba(13,110,253,.25);
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.25);
 }
 
 .badge {
-    padding: 10px 14px;
+  padding: 10px 14px;
 }
 
 .alert {
-    border-radius: 12px;
-    margin-bottom :20px;
-    font-weight :600;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .card-title {
@@ -123,23 +125,7 @@ textarea {
   padding: 12px;
 }
 
-/* Responsive */
-
-@media (max-width: 768px) {
-  .signup-card .card-body {
-    padding: 25px;
-  }
-
-  .signup-title {
-    font-size: 1.6rem;
-  }
-}
-
-/* Application Navigation */
-
-.app-navbar {
-  position: relative;
-}
+/* Navbar */
 
 .navbar-brand {
   text-decoration: none;
@@ -150,91 +136,44 @@ textarea {
   box-shadow: none;
 }
 
-.desktop-nav-actions {
-  flex-wrap: wrap;
+.navbar-nav {
+  align-items: center;
 }
 
-.language-switcher .btn {
-  min-width: auto;
-}
-
-.mobile-navbar {
-  position: relative;
-}
-
-.mobile-menu {
-  position: relative;
-}
-
-.mobile-menu summary {
-  list-style: none;
-}
-
-.mobile-menu summary::-webkit-details-marker {
-  display: none;
-}
-
-.mobile-menu-button {
+.language-switcher {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border: 1px solid #dee2e6;
-  border-radius: 10px;
-  background: white;
-  cursor: pointer;
-  font-size: 1.5rem;
-  line-height: 1;
+  gap: 8px;
 }
 
-.mobile-menu-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
-}
-
-.mobile-menu-content {
-  position: absolute;
-  top: 52px;
-  right: 0;
-  z-index: 1000;
-  width: 240px;
-  padding: 12px;
-  background: white;
-  border: 1px solid #dee2e6;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-.mobile-menu-content form {
-  width: 100%;
-}
-
-.mobile-menu-content form {
-  width: 100%;
-}
-
-.mobile-logout-button {
-  width: 100%;
-  margin-top: 0;
-  padding: 10px 12px;
-  color: #dc3545;
-  background: transparent;
-  border: 1px solid #dc3545;
-  border-radius: 8px;
-  font-weight: 600;
-}
-
-.mobile-add-entry .btn {
-  padding: 12px;
-}
-
-@media (max-width: 767.98px) {
-  .app-navbar {
-    margin-bottom: 12px !important;
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    align-items: stretch;
+    padding-top: 15px;
   }
 
-  .mobile-tagline {
-    padding: 0 12px;
+  .navbar-nav .nav-item {
+    margin-bottom: 12px;
+  }
+
+  .language-switcher {
+    gap: 8px;
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .signup-card .card-body {
+    padding: 25px;
+  }
+
+  .signup-title {
+    font-size: 1.6rem;
+  }
+
+  .page-container {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }

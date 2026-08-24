@@ -39,6 +39,8 @@ en:
     logout: "Log out"
     english: "English"
     japanese: "日本語"
+    toggle_navigation: "Toggle navigation"
+    language_switcher: "Language switcher"
 
   flash:
     login_required: "Please login first." 
