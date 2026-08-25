@@ -35,12 +35,20 @@ en:
 
   navigation:
     daily_learning_tracker: "Daily Learning Tracker"
+    home: "Home"
+    learning_entries: "Learning Entries"
     add_new_entry: "Add New Entry"
     logout: "Log out"
     english: "English"
     japanese: "日本語"
     toggle_navigation: "Toggle navigation"
     language_switcher: "Language switcher"
+
+  sidebar:
+    home: "Home"
+    learning_entries: "Learning Entries"
+    add_new_entry: "Add New Entry"
+    logout: "Log out"
 
   flash:
     login_required: "Please login first." 
@@ -122,6 +130,10 @@ en:
       
   application:
     title: "Daily Learning Tracker"
+
+  home:
+    title: "Home"
+    welcome_message: "Welcome to Daily Learning Tracker"
 
   sessions: 
     welcome_back: "Welcome Back" 

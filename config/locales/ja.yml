@@ -5,14 +5,22 @@ ja:
     required: "このフィールドに入力してください。"
 
   navigation:
-    daily_learning_tracker: "デイリー学習トラッカー"
+    daily_learning_tracker: "Daily Learning Tracker"
+    home: "ホーム"
+    learning_entries: "学習記録"
     add_new_entry: "新しい記録を追加"
     logout: "ログアウト"
     english: "English"
-    japanese: "日本語" 
+    japanese: "日本語"
     toggle_navigation: "ナビゲーションを切り替える"
     language_switcher: "言語切り替え"
 
+  sidebar:
+    home: "ホーム"
+    learning_entries: "学習記録"
+    add_new_entry: "新しい記録を追加"
+    logout: "ログアウト"
+    
   flash:
     login_required: "先にログインしてください。"
 
@@ -97,6 +105,10 @@ ja:
       
   application:
     title: "デイリー学習トラッカー"
+
+  home:
+    title: "ホーム"
+    welcome_message: "Daily Learning Trackerへようこそ"
 
   sessions:
     welcome_back: "おかえりなさい"
