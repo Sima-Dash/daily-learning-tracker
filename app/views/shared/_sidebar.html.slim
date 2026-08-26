@@ -15,8 +15,3 @@ aside.sidebar.border-end.bg-light
       = link_to t("sidebar.add_new_entry"),
           new_learning_entry_path,
           class: "sidebar-link"
-
-      = link_to t("sidebar.logout"),
-          logout_path,
-          data: { turbo_method: :delete },
-          class: "sidebar-link"

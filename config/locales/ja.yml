@@ -19,7 +19,6 @@ ja:
     home: "ホーム"
     learning_entries: "学習記録"
     add_new_entry: "新しい記録を追加"
-    logout: "ログアウト"
     
   flash:
     login_required: "先にログインしてください。"

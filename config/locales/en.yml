@@ -48,7 +48,6 @@ en:
     home: "Home"
     learning_entries: "Learning Entries"
     add_new_entry: "Add New Entry"
-    logout: "Log out"
 
   flash:
     login_required: "Please login first." 
