@@ -27,11 +27,10 @@ class SessionsController < ApplicationController
 
   def destroy
 
-    session.delete(:user_id)
+    session.delete(:user_id) 
 
-    flash[:notice] = I18n.t("flash.sessions.logout_success") 
-
-    redirect_to login_path
+    redirect_to login_path, 
+                notice: I18n.t("flash.sessions.logout_success")
     
   end
   

@@ -5,7 +5,7 @@ ja:
     required: "このフィールドに入力してください。"
 
   navigation:
-    daily_learning_tracker: "Daily Learning Tracker"
+    daily_learning_tracker: "デイリー学習トラッカー"
     home: "ホーム"
     learning_entries: "学習記録"
     add_new_entry: "新しい記録を追加"

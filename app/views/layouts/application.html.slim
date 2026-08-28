@@ -43,15 +43,16 @@ html
 
     / Flash Messages
 
-    .container.mt-3
+    #flash
+      .container.mt-3
 
-      - flash.each do |type, message|
+        - flash.each do |type, message|
 
-        .alert.alert-success.alert-dismissible.fade.show role="alert" 
-          
-          = message
+          .alert.alert-success.alert-dismissible.fade.show role="alert"
 
-          button.btn-close type="button" data-bs-dismiss="alert" aria-label=t("common.close")
+            = message
+
+            button.btn-close type="button" data-bs-dismiss="alert" aria-label=t("common.close")
 
     = yield
 

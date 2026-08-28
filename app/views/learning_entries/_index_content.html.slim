@@ -6,8 +6,8 @@
 
     = form_with url: learning_entries_path,
         method: :get,
-        local: true,
-        class: "search-form d-flex flex-column flex-md-row gap-2" do
+        class: "search-form d-flex flex-column flex-md-row gap-2",
+        data: { turbo_frame: "learning_entries_results" } do
 
       = text_field_tag :search,
           params[:search],
@@ -19,24 +19,30 @@
 
       = link_to t("learning_entries.reset"),
           learning_entries_path,
-          class: "btn btn-secondary"
+          class: "btn btn-secondary",
+          data: { turbo_frame: "learning_entries_results" }
 
-- if @entries.any?
+= turbo_frame_tag "learning_entries_results" do
 
-  - @entries.each do |entry|
+  #learning_entries
 
-    = render "learning_entry",
-        entry: entry
+    - if @entries.any?
 
-- else
+      - @entries.each do |entry|
 
-  - if params[:search].present?
+        = render "learning_entry",
+            entry: entry
 
-    .alert.alert-warning.text-center
-      = t("learning_entries.no_entries_found_for", search: params[:search])
-      
-  - else
+    - else
 
-    .alert.alert-info.text-center
+      - if params[:search].present?
 
-      = t("learning_entries.no_entries_found")
+        .alert.alert-warning.text-center
+
+          = t("learning_entries.no_entries_found_for", search: params[:search])
+
+      - else
+
+        .alert.alert-info.text-center
+
+          = t("learning_entries.no_entries_found")
