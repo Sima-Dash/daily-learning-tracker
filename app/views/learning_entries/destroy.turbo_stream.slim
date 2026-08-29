@@ -1,1 +1,5 @@
 = turbo_stream.remove dom_id(@entry)
+
+= turbo_stream.replace "flash_messages" do
+  #flash_messages.container.mt-3
+    = render "shared/flash"

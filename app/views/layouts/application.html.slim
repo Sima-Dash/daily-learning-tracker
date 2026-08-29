@@ -41,18 +41,8 @@ html
       = render "shared/navbar"
       = render "shared/sidebar"
 
-    / Flash Messages
-
-    #flash
-      .container.mt-3
-
-        - flash.each do |type, message|
-
-          .alert.alert-success.alert-dismissible.fade.show role="alert"
-
-            = message
-
-            button.btn-close type="button" data-bs-dismiss="alert" aria-label=t("common.close")
+    #flash_messages.container.mt-3
+      = render "shared/flash"
 
     = yield
 

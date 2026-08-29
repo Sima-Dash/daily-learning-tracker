@@ -43,9 +43,14 @@ class LearningEntriesController < ApplicationController
     @entry = LearningEntry.find(params[:id])
     @entry.destroy
 
-    redirect_to learning_entries_path,
-                notice: I18n.t("flash.learning_entries.deleted"),
-                status: :see_other
+    flash[:notice] = I18n.t("flash.learning_entries.deleted")
+
+    respond_to do |format|
+      format.turbo_stream
+      format.html do
+        redirect_to learning_entries_path
+      end
+    end
   end
 
   private
