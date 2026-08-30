@@ -10,13 +10,13 @@
 
           h2.text-warning.text-center.mb-4
 
-            | Edit Learning Entry
+            = t("learning_entries.edit_learning_entry") 
 
           = render "form",
               entry: @entry
 
           .mt-4
 
-            = link_to "⬅️ Back",
+            = link_to t("learning_entries.back"),
                 learning_entries_path,
                 class: "btn btn-outline-secondary"

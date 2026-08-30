@@ -5,13 +5,13 @@ html
   head
 
     title
-      = content_for(:title) || "Daily Learning Tracker"
+      = content_for(:title) || t("application.title")
 
     meta name="viewport" content="width=device-width,initial-scale=1"
 
     meta name="apple-mobile-web-app-capable" content="yes"
 
-    meta name="application-name" content="Daily Learning Tracker"
+    meta name="application-name" content=t("application.title")
 
     meta name="mobile-web-app-capable" content="yes"
 
@@ -37,17 +37,12 @@ html
 
   body
 
-    / Flash Messages
+    - if logged_in?
+      = render "shared/navbar"
+      = render "shared/sidebar"
 
-    .container.mt-3
-
-      - flash.each do |type, message|
-
-        .alert.alert-success.alert-dismissible.fade.show role="alert" 
-          
-          = message
-
-          button.btn-close type="button" data-bs-dismiss="alert" aria-label="Close"
+    #flash_messages.container.mt-3
+      = render "shared/flash"
 
     = yield
 
@@ -57,4 +52,4 @@ html
 
         p.text-center.text-muted.small.mb-0
 
-          | © 2026 Sima Dash. All Rights Reserved.
+          = t("footer.copyright")

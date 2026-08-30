@@ -2,98 +2,68 @@
 
 ## Project Overview
 
-Daily Learning Tracker is a beginner-friendly Ruby on Rails application that helps users record and manage their daily learning activities. The project includes secure user authentication, CRUD operations, responsive Bootstrap UI, search functionality, and Slim templates.
+Daily Learning Tracker is a beginner-friendly Ruby on Rails application that helps users record and manage their daily learning activities.
+
+The application includes user authentication, CRUD operations, search functionality, form validation, flash messages, responsive Bootstrap UI, Slim templates, English and Japanese language switching, sidebar navigation, and Hotwire Turbo for improved user interactions.
 
 ## Features
 
 - User Sign Up
 - User Login
 - User Logout
-- Secure Authentication
+- Authentication and Login Protection
 - Create Learning Entries
 - View Learning Entries
 - Update Learning Entries
 - Delete Learning Entries
-- Search Learning Entries
-- Form Validations
+- Search Learning Entries by Topic
+- Form Validation
 - Flash Messages
+- English ↔ Japanese Language Switching
+- Responsive Navigation Bar
+- Sidebar Navigation
 - Responsive Bootstrap UI
 - Slim Templates
+- Reusable Slim Partials
+- Hotwire Turbo
+- Stimulus for client-side interactions
+
 ---
 
 ## Technologies Used
 
 - Ruby
-- Ruby on Rails
+- Ruby on Rails 8.1.3
 - SQLite3
 - Bootstrap 5
 - Slim
+- Hotwire Turbo
+- Stimulus
+- Rails I18n
 - Dart Sass
+
 ---
 
 ## CRUD Operations
+
+The application supports the following CRUD operations for learning entries:
+
 - Create
 - Read
 - Update
 - Delete
----
-
-## Project Structure
-
-Models
-- LearningEntry
-- User
-
-Controllers
-- LearningEntriesController
-- UsersController
-- SessionsController
-
-Views
-- Learning Entries
-- Users
-- Sessions
-- Layouts
-- Partials
 
 ---
 
-## How To Run
+## Internationalization
 
-1. Clone the repository
+The application supports two languages:
 
-2. Install dependencies
+- English
+- Japanese
 
-bundle install
+Rails Internationalization (I18n) is used to manage translations through locale files:
 
-3. Run database migrations
-
-rails db:migrate
-
-4. Start the server
-
-rails server
-
-5. Open your browser
-
-http://127.0.0.1:3000
----
-
-## Learning Outcome
-
-This project helped me learn:
-
-- Ruby on Rails MVC Architecture
-- CRUD Operations
-- Active Record
-- Authentication
-- Sessions
-- Routes
-- Validations
-- Flash Messages
-- Bootstrap Responsive Design
-- Slim Templates
-
-## Author
-
-Sima Dash
+```text
+config/locales/en.yml
+config/locales/ja.yml

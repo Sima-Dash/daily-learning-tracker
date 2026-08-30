@@ -9,10 +9,12 @@
         .card-body
 
           h2.text-success.text-center.mb-4
-          | Add Learning Entry
+            = t("learning_entries.add_learning_entry") 
 
           = render "form", entry: @entry 
 
           .mt-4
 
-            = link_to "⬅️ Back", learning_entries_path, class: "btn btn-outline-secondary" 
+            = link_to t("learning_entries.back"),
+                      learning_entries_path, 
+                      class: "btn btn-outline-secondary" 

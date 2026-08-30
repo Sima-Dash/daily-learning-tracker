@@ -5,66 +5,66 @@
         .card-body.p-4
 
           h2.signup-title.text-center.text-success.mb-4
-            | Create Account
+            = t("users.create_account") 
 
           - if @user.errors.any?
             .alert.alert-danger
               h5
-                = pluralize(@user.errors.count, "error")
-                |  prevented this account from being created.
+                = t("users.errors.title", 
+                    count: @user.errors.count) 
 
               ul.mb-0
                 - @user.errors.full_messages.each do |message|
                   li = message
 
-          = form_with model: @user, local: true do |form|
+          = form_with model: @user, local: true, data: { controller: "validation", validation_message: t("validation.required") } do |form| 
 
             .mb-3
               = form.label :name, class: "form-label" do
-                | Full Name
+                = t("users.full_name") 
                 span.text-danger *
 
               = form.text_field :name,
                   class: "form-control",
-                  placeholder: "Enter your full name",
+                  placeholder: t("users.full_name_placeholder"), 
                   required: true
 
             .mb-3
               = form.label :email, class: "form-label" do
-                | Email
+                = t("users.email") 
                 span.text-danger *
 
               = form.email_field :email,
                   class: "form-control",
-                  placeholder: "Enter your email",
+                  placeholder: t("users.email_placeholder"), 
                   required: true
 
             .mb-3
               = form.label :password, class: "form-label" do
-                | Password
+                = t("users.password") 
                 span.text-danger *
 
               = form.password_field :password,
                   class: "form-control",
-                  placeholder: "Enter your password",
-                  required: true,
+                  placeholder: t("users.password_placeholder"), 
+                  required: true, 
                   autocomplete: "new-password"
 
             .mb-3
               = form.label :password_confirmation, class: "form-label" do
-                | Confirm Password
+                = t("users.password_confirmation") 
                 span.text-danger *
 
               = form.password_field :password_confirmation,
                   class: "form-control",
-                  placeholder: "Confirm your password",
+                  placeholder: t("users.password_confirmation_placeholder"), 
                   required: true,
                   autocomplete: "new-password"
 
             .d-grid.mt-4
-              = form.submit "Sign Up", class: "btn btn-success btn-lg"
+              = form.submit t("users.sign_up"), class: "btn btn-success btn-lg"
 
             .mt-4.text-center
-              = link_to "⬅️ Back",
+              = link_to t("users.back"),
                   learning_entries_path,
                   class: "btn btn-outline-secondary"

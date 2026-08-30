@@ -11,13 +11,13 @@ class SessionsController < ApplicationController
 
       session[:user_id] = user.id
 
-      flash[:notice] = "Login successful."
+      flash[:notice] = I18n.t("flash.sessions.login_success") 
 
       redirect_to learning_entries_path
     
     else
 
-      flash.now[:alert] = "Invalid email or password."
+      flash.now[:alert] = I18n.t("flash.sessions.invalid_credentials") 
 
       render :new, status: :unprocessable_entity
 
@@ -27,11 +27,10 @@ class SessionsController < ApplicationController
 
   def destroy
 
-    session.delete(:user_id)
+    session.delete(:user_id) 
 
-    flash[:notice] = "Logged out successfully."
-
-    redirect_to login_path
+    redirect_to login_path, 
+                notice: I18n.t("flash.sessions.logout_success")
     
   end
   

@@ -1,0 +1,4 @@
+- flash.each do |type, message|
+  .alert.alert-success.alert-dismissible.fade.show.shadow-sm role="alert"
+    = message
+    button.btn-close type="button" aria-label=t("common.close") onclick="this.parentElement.remove()"

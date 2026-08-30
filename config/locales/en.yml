@@ -29,3 +29,125 @@
 
 en:
   hello: "Hello world"
+
+  validation:
+    required: "Please fill out this field."
+
+  navigation:
+    daily_learning_tracker: "Daily Learning Tracker"
+    home: "Home"
+    learning_entries: "Learning Entries"
+    add_new_entry: "Add New Entry"
+    logout: "Log out"
+    english: "English"
+    japanese: "日本語"
+    toggle_navigation: "Toggle navigation"
+    language_switcher: "Language switcher"
+
+  sidebar:
+    home: "Home"
+    learning_entries: "Learning Entries"
+    add_new_entry: "Add New Entry"
+
+  flash:
+    login_required: "Please login first." 
+
+    learning_entries: 
+      created: "Learning entry created successfully." 
+      updated: "Learning entry updated successfully." 
+      deleted: "Learning entry deleted successfully." 
+
+    sessions: 
+      login_success: "Login successful." 
+      invalid_credentials: "Invalid email or password." 
+      logout_success: "Logged out successfully." 
+
+    users: 
+      account_created: "Account created successfully." 
+
+  learning_entries:
+    add_learning_entry: "Add Learning Entry" 
+    tagline: "Track your daily learning progress."
+    search_placeholder: "Search by topic..."
+    search: "Search"
+    reset: "Reset"
+
+    edit_learning_entry: "Edit Learning Entry" 
+    back: "Back" 
+    
+    no_entries_found: "No learning entries found."
+    no_entries_found_for: "No learning entries found for %{search}."
+
+    required_fields_note: "indicates required fields."
+
+    date: "Date"
+    topic: "Topic"
+    hours: "Hours"
+    notes: "Notes"
+
+    topic_placeholder: "Enter topic"
+    hours_placeholder: "Enter hours"
+    notes_placeholder: "Write your learning notes..."
+
+    create: "Create Entry"
+    update: "Update Entry"
+
+    errors:
+      one: "%{count} error prevented this entry from saving:"
+      other: "%{count} errors prevented this entry from saving:"
+
+    card:
+      hours: "%{hours} hrs" 
+      date: "Date:"
+      notes: "Notes:" 
+
+    actions:
+      edit: "Edit"
+      delete: "Delete"
+      
+    confirmations:
+      delete: "Are you sure?"
+  
+  users:
+    create_account: "Create Account"
+
+    errors:
+      title:
+        one: "%{count} error prevented this account from being created."
+        other: "%{count} errors prevented this account from being created."
+
+    full_name: "Full Name"
+    full_name_placeholder: "Enter your full name"
+    email: "Email"
+    email_placeholder: "Enter your email"
+    password: "Password"
+    password_placeholder: "Enter your password"
+    password_confirmation: "Confirm Password"
+    password_confirmation_placeholder: "Confirm your password"
+    sign_up: "Sign Up"
+    back: "Back"
+      
+  application:
+    title: "Daily Learning Tracker"
+
+  home:
+    title: "Home"
+    welcome_message: "Welcome to Daily Learning Tracker"
+
+  sessions: 
+    welcome_back: "Welcome Back" 
+    login_message: "Login to your account" 
+    email: "Email" 
+    email_placeholder: "Enter your email" 
+    password: "Password" 
+    password_placeholder: "Enter your password" 
+    login: "Login" 
+    no_account: "Don't have an account?" 
+    create_account: "Create Account" 
+    back_to_home: "Back to Home" 
+    
+  common:
+    close: "Close"
+
+  footer:
+    copyright: "© 2026 Sima Dash. All Rights Reserved."

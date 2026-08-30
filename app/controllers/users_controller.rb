@@ -8,7 +8,7 @@ class UsersController < ApplicationController
       @user = User.new(user_params)
 
       if @user.save
-        flash[:notice] = "Account created successfully."
+        flash[:notice] = I18n.t("flash.users.account_created") 
         redirect_to login_path
       else
         render :new, status: :unprocessable_entity
