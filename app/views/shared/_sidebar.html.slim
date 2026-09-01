@@ -1,17 +1,15 @@
-aside.sidebar.border-end.bg-light
-
-  .p-3
-
-    nav.nav.flex-column
+aside.sidebar data-sidebar-target="sidebar"
+  .sidebar-content
+    nav.sidebar-nav
 
       = link_to t("sidebar.home"),
           home_index_path,
-          class: "sidebar-link"
+          class: "sidebar-link #{'active' if current_page?(home_index_path)}"
 
       = link_to t("sidebar.learning_entries"),
           learning_entries_path,
-          class: "sidebar-link"
+          class: "sidebar-link #{'active' if current_page?(learning_entries_path)}"
 
       = link_to t("sidebar.add_new_entry"),
           new_learning_entry_path,
-          class: "sidebar-link"
+          class: "sidebar-link #{'active' if current_page?(new_learning_entry_path)}"

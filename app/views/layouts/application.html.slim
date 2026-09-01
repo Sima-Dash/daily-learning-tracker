@@ -35,21 +35,26 @@ html
 
     = javascript_importmap_tags
 
-  body
+  body data-controller="sidebar"
 
-    - if logged_in?
+    - if logged_in? && controller_name != "sessions"
       = render "shared/navbar"
-      = render "shared/sidebar"
 
     #flash_messages.container.mt-3
       = render "shared/flash"
 
-    = yield
+    - if logged_in? && controller_name != "sessions"
+      .app-layout
+        = render "shared/sidebar"
+
+        main.main-content
+          = yield
+
+    - else
+      main.main-content
+        = yield
 
     footer.bg-light.border-top.mt-5.py-4.shadow-sm
-
-      .container 
-
+      .container
         p.text-center.text-muted.small.mb-0
-
           = t("footer.copyright")
