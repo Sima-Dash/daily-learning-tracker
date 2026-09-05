@@ -88,6 +88,23 @@ textarea {
   margin-right: 8px;
 }
 
+/* Fix search input cutting */
+
+.search-form {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+
+.search-form .form-control {
+  flex: 1;
+  min-width: 0;
+}
+
+.search-form .btn {
+  flex-shrink: 0;
+}
+
 /* Sign Up Page */
 
 .signup-card {
@@ -125,10 +142,29 @@ textarea {
   padding: 12px;
 }
 
+/* Login Page */
+
+.login-app-icon {
+  display: block !important;
+  width: 40px !important;
+  height: 40px !important;
+  max-width: 40px !important;
+  max-height: 40px !important;
+  object-fit: contain !important;
+  margin: 0 auto 12px !important;
+}
+
 /* Navbar */
 
 .navbar-brand {
   text-decoration: none;
+}
+
+.navbar-app-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .navbar-brand:focus {
@@ -147,6 +183,37 @@ textarea {
 }
 
 @media (max-width: 991.98px) {
+
+  .navbar-app-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .navbar-brand {
+    min-width: 0;
+    max-width: calc(100% - 55px);
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .navbar-brand span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .navbar-toggler {
+    display: block;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
   .navbar-nav {
     align-items: stretch;
     padding-top: 15px;
@@ -215,10 +282,7 @@ textarea {
 
 /* Responsive */
 
-@media (max-width: 768px) {
-  .app-layout {
-    position: relative;
-  }
+@media (max-width: 991.98px) {
 
   .sidebar {
     display: none;
@@ -226,16 +290,30 @@ textarea {
 
   .sidebar.show {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 250px;
-    min-height: 100%;
-    z-index: 1000;
+
+    width: 260px;
+    height: 100vh;
+
+    min-height: 100vh;
+
+    z-index: 1050;
+
+    overflow-y: auto;
+
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .sidebar-content {
+    padding: 20px;
   }
 
   .main-content {
     width: 100%;
     padding: 20px 12px;
   }
+
 }
+

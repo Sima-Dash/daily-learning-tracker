@@ -1,14 +1,20 @@
-nav.navbar.navbar-expand-lg.bg-white.border-bottom.shadow-sm.mb-4 data-controller="navbar"
+nav.navbar.navbar-expand-lg.bg-white.border-bottom.shadow-sm.mb-4
   .container
 
-    = link_to t("navigation.daily_learning_tracker"),
-        learning_entries_path,
-        class: "navbar-brand fw-bold"
+    = link_to learning_entries_path,
+        class: "navbar-brand fw-bold d-flex align-items-center gap-2" do
+
+      = image_tag "learning_tracker_icon.png",
+          alt: t("application.title"),
+          class: "navbar-app-icon"
+
+      span
+        = t("navigation.daily_learning_tracker")
 
     button.navbar-toggler type="button" data-action="click->sidebar#toggle" data-sidebar-target="button" aria-expanded="false" aria-label=t("navigation.toggle_navigation")
       span.navbar-toggler-icon
 
-    #mainNavbar.navbar-collapse data-navbar-target="menu"
+    #mainNavbar.navbar-collapse
       .navbar-nav.ms-auto.align-items-lg-center.gap-3
 
         .nav-item

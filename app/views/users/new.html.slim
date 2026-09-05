@@ -4,8 +4,20 @@
       .card.signup-card
         .card-body.p-4
 
-          h2.signup-title.text-center.text-success.mb-4
-            = t("users.create_account") 
+          .text-center.mb-4
+
+            = image_tag "learning_tracker_icon.png",
+                alt: t("application.title"),
+                class: "login-app-icon"
+
+            h2.text-primary.mb-2
+              = t("application.title")
+
+            p.text-muted.mb-3
+              = t("users.tagline")
+
+            h3.signup-title.text-success.mb-0
+              = t("users.create_account")
 
           - if @user.errors.any?
             .alert.alert-danger

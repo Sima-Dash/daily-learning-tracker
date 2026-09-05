@@ -35,26 +35,33 @@ html
 
     = javascript_importmap_tags
 
-  body data-controller="sidebar"
+  body
 
-    - if logged_in? && controller_name != "sessions"
-      = render "shared/navbar"
+    - if logged_in?
+      .app-shell data-controller="sidebar"
 
-    #flash_messages.container.mt-3
-      = render "shared/flash"
+        = render "shared/navbar"
 
-    - if logged_in? && controller_name != "sessions"
-      .app-layout
-        = render "shared/sidebar"
+        .app-layout
+          = render "shared/sidebar"
 
-        main.main-content
-          = yield
+          main.main-content
+
+            #flash_messages.container.mt-3
+              = render "shared/flash"
+
+            = yield
 
     - else
-      main.main-content
-        = yield
+
+      #flash_messages.container.mt-3
+        = render "shared/flash"
+
+      = yield
 
     footer.bg-light.border-top.mt-5.py-4.shadow-sm
+
       .container
+
         p.text-center.text-muted.small.mb-0
           = t("footer.copyright")

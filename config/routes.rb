@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :learning_entries
 
   resources :users, only: [:new, :create]
+  
+  get "/profile", to: "profiles#show", as: :profile
 
   #language switch route
   get "/set_locale/:locale", to: "application#change_locale", as: :set_locale  

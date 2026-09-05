@@ -48,6 +48,7 @@ en:
     home: "Home"
     learning_entries: "Learning Entries"
     add_new_entry: "Add New Entry"
+    profile: "Profile"
 
   flash:
     login_required: "Please login first." 
@@ -110,6 +111,7 @@ en:
   
   users:
     create_account: "Create Account"
+    tagline: "Start tracking your daily learning journey."
 
     errors:
       title:
@@ -134,20 +136,25 @@ en:
     title: "Home"
     welcome_message: "Welcome to Daily Learning Tracker"
 
-  sessions: 
-    welcome_back: "Welcome Back" 
-    login_message: "Login to your account" 
-    email: "Email" 
-    email_placeholder: "Enter your email" 
-    password: "Password" 
-    password_placeholder: "Enter your password" 
-    login: "Login" 
-    no_account: "Don't have an account?" 
-    create_account: "Create Account" 
-    back_to_home: "Back to Home" 
+  sessions:
+    title: "Daily Learning Tracker"
+    tagline: "Track your daily learning and build consistent progress."
+    email: "Email"
+    email_placeholder: "Enter your email"
+    password: "Password"
+    password_placeholder: "Enter your password"
+    login: "Login"
+    no_account: "Don't have an account?"
+    create_account: "Create Account"
+    back_to_home: "Back to Home"
     
   common:
     close: "Close"
 
   footer:
     copyright: "© 2026 Sima Dash. All Rights Reserved."
+
+  profile:
+    title: "My Profile"
+    name: "Name"
+    email: "Email"

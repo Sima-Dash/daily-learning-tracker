@@ -19,6 +19,7 @@ ja:
     home: "ホーム"
     learning_entries: "学習記録"
     add_new_entry: "新しい記録を追加"
+    profile: "プロフィール"
     
   flash:
     login_required: "先にログインしてください。"
@@ -81,6 +82,7 @@ ja:
   
   users:
     create_account: "アカウントを作成"
+    tagline: "毎日の学習を記録して、成長を始めましょう。"
 
     errors:
       title:
@@ -110,8 +112,8 @@ ja:
     welcome_message: "Daily Learning Trackerへようこそ"
 
   sessions:
-    welcome_back: "おかえりなさい"
-    login_message: "アカウントにログインしてください"
+    title: "デイリー学習トラッカー"
+    tagline: "毎日の学習を記録して、成長を続けましょう。"
     email: "メールアドレス"
     email_placeholder: "メールアドレスを入力"
     password: "パスワード"
@@ -126,3 +128,8 @@ ja:
 
   footer:
     copyright: "© 2026 Sima Dash. 無断転載を禁じます。"
+
+  profile:
+    title: "プロフィール"
+    name: "名前"
+    email: "メールアドレス"

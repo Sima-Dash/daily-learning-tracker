@@ -8,11 +8,17 @@
 
         .card-body.p-4
 
+          .text-center.mb-3
+            = image_tag "learning_tracker_icon.png",
+                alt: t("sessions.title"),
+                class: "login-app-icon"
+
           h2.text-center.text-primary.mb-2
-            = t("sessions.welcome_back") 
+            = t("sessions.title")
+
 
           p.text-center.text-muted.mb-4
-            = t("sessions.login_message") 
+            = t("sessions.tagline")
 
           = form_with url: login_path, method: :post, local: true, data: { controller: "validation", validation_message: t("validation.required") } do |form| 
             .mb-3

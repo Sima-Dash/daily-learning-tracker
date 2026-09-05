@@ -1,0 +1,26 @@
+.container.py-4
+
+  .row.justify-content-center
+
+    .col-md-8.col-lg-6
+
+      .card.shadow-sm.border-0
+
+        .card-body.p-4
+
+          h1.h3.mb-4
+            = t("profile.title")
+
+          .mb-4
+            p.text-muted.mb-1
+              = t("profile.name")
+
+            p.fw-semibold.mb-0
+              = @user.name
+
+          .mb-4
+            p.text-muted.mb-1
+              = t("profile.email")
+
+            p.fw-semibold.mb-0
+              = @user.email

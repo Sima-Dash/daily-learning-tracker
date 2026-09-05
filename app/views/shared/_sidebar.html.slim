@@ -13,3 +13,7 @@ aside.sidebar data-sidebar-target="sidebar"
       = link_to t("sidebar.add_new_entry"),
           new_learning_entry_path,
           class: "sidebar-link #{'active' if current_page?(new_learning_entry_path)}"
+
+      = link_to t("sidebar.profile"),
+          profile_path,
+          class: "sidebar-link #{'active' if current_page?(profile_path)}"

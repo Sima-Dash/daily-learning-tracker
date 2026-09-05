@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :require_login, only: [:show]
 
     def new
         @user = User.new
@@ -13,6 +14,10 @@ class UsersController < ApplicationController
       else
         render :new, status: :unprocessable_entity
       end
+    end
+
+    def show
+      @user = current_user
     end
 
     private
