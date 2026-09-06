@@ -1,38 +1,48 @@
 nav.navbar.navbar-expand-lg.bg-white.border-bottom.shadow-sm.mb-4
-  .container
+  .container.d-flex.flex-wrap.align-items-center.justify-content-between.gap-2
 
-    = link_to learning_entries_path,
-        class: "navbar-brand fw-bold d-flex align-items-center gap-2" do
+    / Title + Mobile Hamburger Button
+    .d-flex.align-items-center.gap-2
+      = link_to learning_entries_path,
+          class: "navbar-brand fw-bold d-flex align-items-center gap-2 m-0 p-0 text-nowrap" do
+        = image_tag "learning_tracker_icon.png",
+            alt: t("application.title"),
+            class: "navbar-app-icon"
+        span
+          = t("navigation.daily_learning_tracker")
 
-      = image_tag "learning_tracker_icon.png",
-          alt: t("application.title"),
-          class: "navbar-app-icon"
+      button.navbar-toggler.d-lg-none type="button" data-action="click->sidebar#toggle" data-sidebar-target="button" aria-expanded="false" aria-label=t("navigation.toggle_navigation")
+        span.navbar-toggler-icon
 
-      span
-        = t("navigation.daily_learning_tracker")
+    / Search Bar (Controlled Width)
+    .navbar-search-wrapper
+      = form_with url: learning_entries_path,
+          method: :get,
+          class: "d-flex gap-2 w-100 m-0",
+          data: { turbo_frame: "learning_entries_results" } do
+        = text_field_tag :search,
+            params[:search],
+            class: "form-control form-control-sm",
+            placeholder: t("learning_entries.search_placeholder")
+        = submit_tag t("learning_entries.search"),
+            class: "btn btn-primary btn-sm px-3 flex-shrink-0"
 
-    button.navbar-toggler type="button" data-action="click->sidebar#toggle" data-sidebar-target="button" aria-expanded="false" aria-label=t("navigation.toggle_navigation")
-      span.navbar-toggler-icon
-
-    #mainNavbar.navbar-collapse
-      .navbar-nav.ms-auto.align-items-lg-center.gap-3
-
+    / Desktop Actions (Add Entry, Languages, Logout)
+    #mainNavbar.navbar-collapse.flex-grow-0
+      .navbar-nav.d-flex.flex-row.align-items-center.gap-2
         .nav-item
           = link_to t("navigation.add_new_entry"),
               new_learning_entry_path,
-              class: "btn btn-success px-3"
-
-        .nav-item.language-switcher
+              class: "btn btn-success btn-sm px-3 text-nowrap"
+        .nav-item.language-switcher.d-flex.gap-1
           = link_to t("navigation.english"),
               set_locale_path(:en),
               class: I18n.locale == :en ? "btn btn-primary btn-sm" : "btn btn-outline-primary btn-sm"
-
           = link_to t("navigation.japanese"),
               set_locale_path(:ja),
               class: I18n.locale == :ja ? "btn btn-primary btn-sm" : "btn btn-outline-primary btn-sm"
-
         .nav-item
           = button_to t("navigation.logout"),
               logout_path,
               method: :delete,
-              class: "btn btn-outline-danger btn-sm"
+              class: "btn btn-outline-danger btn-sm text-nowrap"

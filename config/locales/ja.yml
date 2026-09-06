@@ -40,7 +40,7 @@ ja:
   learning_entries:
     add_learning_entry: "学習記録を追加"  
     tagline: "毎日の学習の進捗を記録しましょう。"
-    search_placeholder: "トピックで検索..."
+    search_placeholder: "検索..."
     search: "検索"
     reset: "リセット"
 

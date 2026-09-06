@@ -69,7 +69,7 @@ en:
   learning_entries:
     add_learning_entry: "Add Learning Entry" 
     tagline: "Track your daily learning progress."
-    search_placeholder: "Search by topic..."
+    search_placeholder: "Search..."
     search: "Search"
     reset: "Reset"
 
