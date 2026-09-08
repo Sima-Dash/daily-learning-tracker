@@ -4,6 +4,17 @@ ja:
   validation:
     required: "このフィールドに入力してください。"
 
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: "この項目を入力してください。"
+              too_short: "パスワードが短すぎます（最低 %{count} 文字必要です）。"
+            password_confirmation:
+              confirmation: "パスワードが一致しません"
+
   navigation:
     daily_learning_tracker: "デイリー学習トラッカー"
     home: "ホーム"
@@ -23,6 +34,10 @@ ja:
     
   flash:
     login_required: "先にログインしてください。"
+
+    profile:
+      current_password_incorrect: "現在のパスワードが正しくありません。"
+      password_updated: "パスワードを更新しました。"
 
     learning_entries: 
       created: "学習記録を作成しました。"
@@ -133,3 +148,11 @@ ja:
     title: "プロフィール"
     name: "名前"
     email: "メールアドレス"
+
+    change_password: "パスワードを変更"
+    current_password: "現在のパスワード"
+    new_password: "新しいパスワード"
+    confirm_new_password: "新しいパスワード（確認）"
+
+    update_password: "パスワードを更新"
+    cancel: "キャンセル"

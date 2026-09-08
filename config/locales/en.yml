@@ -33,6 +33,17 @@ en:
   validation:
     required: "Please fill out this field."
 
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: "Please fill out this field."
+              too_short: "Password is too short (minimum is %{count} characters)."
+            password_confirmation:
+              confirmation: "doesn't match Password"
+
   navigation:
     daily_learning_tracker: "Daily Learning Tracker"
     home: "Home"
@@ -52,6 +63,10 @@ en:
 
   flash:
     login_required: "Please login first." 
+
+    profile:
+      current_password_incorrect: "Current password is incorrect."
+      password_updated: "Password updated successfully."
 
     learning_entries: 
       created: "Learning entry created successfully." 
@@ -158,3 +173,11 @@ en:
     title: "My Profile"
     name: "Name"
     email: "Email"
+
+    change_password: "Change Password"
+    current_password: "Current Password"
+    new_password: "New Password"
+    confirm_new_password: "Confirm New Password"
+
+    update_password: "Update Password"
+    cancel: "Cancel"
