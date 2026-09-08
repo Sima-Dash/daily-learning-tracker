@@ -24,3 +24,8 @@
 
             p.fw-semibold.mb-0
               = @user.email
+
+          .mt-4
+            = link_to "Change Password",
+                      edit_profile_path,
+                      class: "btn btn-primary"
