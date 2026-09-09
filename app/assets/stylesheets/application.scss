@@ -89,6 +89,22 @@ textarea {
   min-width: 100px;
 }
 
+@media (max-width: 576px) {
+
+  .search-form {
+
+    flex-direction: column;
+
+  }
+
+  .search-form .btn {
+
+    width: 100%;
+
+  }
+
+}
+
 /* Sign Up Page */
 .signup-card {
   border: none;
@@ -137,7 +153,7 @@ textarea {
 }
 
 /* =========================================
-   NAVBAR STYLES (Search bar fix included)
+   NAVBAR STYLES
    ========================================= */
 .navbar-brand {
   text-decoration: none;
@@ -155,19 +171,8 @@ textarea {
   flex-shrink: 0;
 }
 
-/* Desktop Search Bar Width Limit */
-.navbar-search-wrapper {
-  width: 100%;
-  max-width: 320px; 
-}
-
 /* Mobile & Tablet Navbar Fixes */
 @media (max-width: 991.98px) {
-  .navbar-search-wrapper {
-    order: 2; 
-    max-width: 100%; 
-    margin-top: 8px;
-  }
 
   #mainNavbar {
     order: 3;
