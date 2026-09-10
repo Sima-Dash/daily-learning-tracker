@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    environment:
+      RAILS_MASTER_KEY: ${RAILS_MASTER_KEY}
+    ports:
+      - "3000:80"
+    volumes:
+      - sqlite_storage:/rails/storage
+
+volumes:
+  sqlite_storage:
