@@ -5,13 +5,21 @@ ja:
     required: "このフィールドに入力してください。"
 
   activerecord:
+    attributes:
+      user:
+        password: "パスワード"
+        password_confirmation: "パスワード（確認）"
+
     errors:
+      format: "%{message}"
+
       models:
         user:
           attributes:
             password:
               blank: "この項目を入力してください。"
               too_short: "パスワードが短すぎます（最低 %{count} 文字必要です）。"
+
             password_confirmation:
               confirmation: "パスワードが一致しません"
 
